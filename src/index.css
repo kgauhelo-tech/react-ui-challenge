@@ -1,0 +1,9 @@
+:root {
+  --bg: linear-gradient(to right, #202020, #010101);
+
+  background-image: var(--bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
