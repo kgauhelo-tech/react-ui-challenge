@@ -8,6 +8,12 @@
   --special-text: #07c7b9;
   --text: #fff;
 }
+
+/* I have to fix the space for screens between 375px and 425px
+  the services type-2 cards are not displaying properly,
+  the culprit is most likely the width and height
+ */
+
 .special {
   color: var(--special-text);
 }
@@ -162,6 +168,11 @@ main {
 
 .hero-left {
   flex: 1.3;
+  @media (max-width: 425px) {
+    flex: 1;
+    padding: 0;
+    justify-self: start;
+  }
 }
 
 .hero-right {
@@ -177,6 +188,9 @@ main {
   margin-top: 1vh;
   @media (max-width: 780px) {
     margin-top: 2vh;
+  }
+  @media (max-width: 425px) {
+    font-size: 2rem;
   }
 }
 
@@ -204,13 +218,13 @@ button:hover {
 }
 
 .services-section {
-  /* height: 70vh; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: 26vh 0 10vh 0;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: center; /* Last edit. Laptop view 1440 */
 }
 
 .left-services {
@@ -222,71 +236,56 @@ button:hover {
     width: 100%;
   }
 }
+/* Styling for the right side of the services section */
+
 .right-services {
-  @media (max-width: 425px) {
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 35em;
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
   }
   @media (min-width: 425px) and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 14em;
-    gap: 15px;
-    align-items: center;
-    margin-top: 2vh;
-  }
-  @media (min-width: 1440px) {
-    width: 40%;
-    padding-left: 1em;
-    padding-top: 1em;
-    margin-left: auto;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    justify-items: center;
     gap: 2em;
-  }
-}
-
-.top-services {
-  display: flex;
-  flex-direction: row;
-  @media (min-width: 768px) {
-    gap: 15px;
-  }
-}
-
-.bottom-services {
-  display: flex;
-  flex-direction: row;
-  @media (min-width: 768px) {
-    gap: 5px;
+    margin-left: auto;
+    margin-bottom: 20vh;
   }
 
-  @media (min-width: 425px) and (max-width: 768px) {
-    gap: 20px;
+  @media (min-width: 375px) and (max-width: 425px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2em;
+    margin: 0 auto;
+    /* margin-bottom: 5vh; */
+  }
+  @media (max-width: 320px) {
+    display: grid;
+    gap: 1.5em;
   }
 }
 
 .box-left {
   box-shadow: -4px 4px 10px 0 #07c5b83a;
-  @media (min-width: 768px) {
-    height: 205px;
-  }
 }
 
 .box-right {
   box-shadow: 4px -4px 10px 0 #07c5b83a;
-  @media (min-width: 768px) {
-    height: 205px;
-  }
 }
 
 .separator {
   margin-top: 2vh;
 }
 
+/* About Section Styling */
 .about {
   display: flex;
   flex-direction: row;
@@ -302,10 +301,11 @@ button:hover {
   @media (max-width: 425px) {
     flex-direction: column;
     justify-content: center;
-    margin: 15em 0;
+    margin: 0 0 2em 0;
   }
   @media (max-width: 375px) {
     margin: 0 0;
+    margin-bottom: 20em;
   }
 }
 
@@ -314,10 +314,10 @@ button:hover {
     width: 100%;
   }
   @media (max-width: 425px) {
-    margin-top: 40em;
+    margin-top: 30em;
   }
   @media (max-width: 375px) {
-    margin-top: 0;
+    margin-top: 18em;
   }
 }
 .left-about img {
@@ -325,8 +325,9 @@ button:hover {
   position: relative;
   right: 58px;
   height: 30em;
-  @media (max-width: 780px) {
-    margin-top: 10vh;
+  filter: blur(2px);
+  @media (max-width: 768px) {
+    margin-top: 15vh;
     right: 20px;
     margin-bottom: 5vh;
     height: unset;
@@ -356,23 +357,12 @@ button:hover {
     padding: 0;
     margin: 0;
   }
-}
-
-.top-services {
-  @media (max-width: 425px) {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
+  @media (min-width: 320px) and (max-width: 375px) {
+    gap: 1em;
   }
 }
 
-.bottom-services {
-  @media (max-width: 425px) {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2em;
-  }
-}
+/* Footer Styling */
 
 footer {
   @media (max-width: 425px) {
@@ -404,6 +394,14 @@ footer {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     margin-top: 25vh;
+  }
+  @media (max-width: 425px) {
+    gap: 1vh;
+  }
+  @media (max-width: 320px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 }
 

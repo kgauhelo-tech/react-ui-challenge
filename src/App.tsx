@@ -148,42 +148,39 @@ function App() {
               </p>
               <button>VIEW ALL</button>
             </div>
+
             <div className="right-services">
-              <div className="top-services">
+              <SectionCard
+                type={1}
+                imageUrl={webIcon}
+                title="Website Design"
+                content="We can design and host your website"
+              ></SectionCard>
+
+              <div className="box-right">
                 <SectionCard
-                  type={1}
-                  imageUrl={webIcon}
-                  title="Website Design"
-                  content="We can design and host your website"
-                ></SectionCard>
-
-                <div className="box-right">
-                  <SectionCard
-                    type={2}
-                    imageUrl={gridIcon}
-                    title="Mobile & Desktop App"
-                    content="We can create and mobile and desktop apps for you"
-                  ></SectionCard>
-                </div>
-              </div>
-
-              <div className="bottom-services">
-                <div className="box-left">
-                  <SectionCard
-                    type={2}
-                    imageUrl={designIcon}
-                    title="UI & UX Design"
-                    content="We can design and prototype your digital products"
-                  ></SectionCard>
-                </div>
-
-                <SectionCard
-                  type={1}
-                  imageUrl={editIcon}
-                  title="Editing Photos"
-                  content="We can edit your pictures to your liking"
+                  type={2}
+                  imageUrl={gridIcon}
+                  title="Mobile & Desktop App"
+                  content="We can create mobile and desktop apps for you"
                 ></SectionCard>
               </div>
+
+              <div className="box-left">
+                <SectionCard
+                  type={2}
+                  imageUrl={designIcon}
+                  title="UI & UX Design"
+                  content="We can design and prototype your digital products"
+                ></SectionCard>
+              </div>
+
+              <SectionCard
+                type={1}
+                imageUrl={editIcon}
+                title="Editing Photos"
+                content="We can edit your pictures to your liking"
+              ></SectionCard>
             </div>
           </div>
 
