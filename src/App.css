@@ -17,8 +17,33 @@
 .special {
   color: var(--special-text);
 }
+
+.background-text {
+  color: var(--special-text);
+  opacity: 0.1;
+  z-index: -1;
+  position: fixed;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  font-size: 12vh;
+
+  @media (min-width: 1440px) {
+    width: unset;
+  }
+
+  width: 80%;
+  height: 100%;
+}
+
 #container {
+  z-index: 2;
   max-width: 1024px;
+  min-height: 100vh;
   color: var(--text);
   padding: 1em;
   margin: 1.4em auto;
@@ -30,13 +55,17 @@
 }
 
 header {
-  position: relative;
+  /* position: relative; */
   color: var(--special-text);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 5vh;
+
+  @media (min-width: 0px) and (max-width: 768px) {
+    position: sticky;
+  }
 }
 
 #main-logo {
@@ -83,9 +112,9 @@ header {
 }
 
 #search {
-  width: 32vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 1em;
   color: var(--special-text);
 }
 #sm-hide {
@@ -104,10 +133,16 @@ header {
 }
 
 #hidden-nav {
+  width: 10em;
   justify-content: right;
   display: none;
   margin-left: 60%;
+  padding: 2vh 1vw;
+  position: absolute;
+  z-index: 100;
+  right: 10vw;
 }
+
 #burger-links ul {
   list-style-type: none;
   display: flex;
@@ -118,6 +153,11 @@ header {
 #burger-links ul li {
   border-bottom: 0.01em solid white;
   padding-bottom: 0.2em;
+  text-align: right;
+}
+
+.blur {
+  filter: blur(8px);
 }
 
 #search-icon {
@@ -148,7 +188,7 @@ main {
   aspect-ratio: 3 / 4;
   width: 55%;
   border-radius: 2em;
-  box-shadow: 30px 16px 16px 0 var(--special-text);
+  box-shadow: 30px 16px 16px 0 #07c7ba4f;
   margin-left: 6em;
   @media (max-width: 780px) {
     width: 90%;
@@ -236,6 +276,7 @@ button:hover {
     width: 100%;
   }
 }
+
 /* Styling for the right side of the services section */
 
 .right-services {

@@ -25,21 +25,31 @@ import modernDesign from "./assets/icons/modern-design.png";
 
 function App() {
   const menuOpenRef = useRef<HTMLDivElement | null>(null);
+  const blurRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   function show() {
     setIsOpen(true);
     menuOpenRef.current!.style.display = "block";
-    console.log(isOpen);
+    blurRef.current?.classList.add("blur");
   }
 
   function collapse() {
     setIsOpen(false);
+    blurRef.current?.classList.remove("blur");
     menuOpenRef.current!.style.display = "none";
   }
 
   return (
     <>
       <div id="container">
+        <div className="background-text">
+          <h1>Y</h1>
+          <h1>K</h1>
+          <h1>R</h1>
+          <h1>H</h1>
+          <h1>O</h1>
+          <h1>X</h1>
+        </div>
         <header>
           <div id="logo">
             <p id="main-logo">HYKROX</p>
@@ -82,21 +92,31 @@ function App() {
           <div id="burger-links">
             <ul>
               <li>
-                <a href="#">HOME</a>
+                <a href="#" onClick={collapse}>
+                  HOME
+                </a>
               </li>
               <li>
-                <a href="#">DESIGNS</a>
+                <a href="#" onClick={collapse}>
+                  DESIGNS
+                </a>
               </li>
               <li>
-                <a href="#services">SERVICES</a>
+                <a href="#services" onClick={collapse}>
+                  SERVICES
+                </a>
               </li>
               <li>
-                <a href="#about">ABOUT US</a>
+                <a href="#about" onClick={collapse}>
+                  ABOUT US
+                </a>
               </li>
               <li>
-                <a href="#">CONTACT US</a>
+                <a href="#" onClick={collapse}>
+                  CONTACT US
+                </a>
               </li>
-              <li id="search">
+              <li id="search" onClick={collapse}>
                 <p>SEARCH</p>
                 <img id="search-icon" src={searchIcon} alt="search button" />
               </li>
@@ -104,7 +124,7 @@ function App() {
           </div>
         </div>
 
-        <main>
+        <main className={isOpen ? "blur" : ""}>
           <div id="hero-section">
             <div className="hero-left">
               <p className="special">CREATIVE DESIGNERS</p>
@@ -219,7 +239,7 @@ function App() {
           </div>
         </main>
 
-        <footer>
+        <footer className={isOpen ? "blur" : ""}>
           <div className="footer-cards">
             <FooterCard
               description="PROJECTS"
