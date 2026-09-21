@@ -306,6 +306,7 @@ button:hover {
   @media (max-width: 375px) {
     margin: 0 0;
     margin-bottom: 20em;
+    margin-top: 0;
   }
 }
 
@@ -332,6 +333,12 @@ button:hover {
     margin-bottom: 5vh;
     height: unset;
     width: 100vw;
+  }
+  @media (max-width: 425px) {
+    margin-top: 10vh;
+  }
+  @media (max-width: 375px) {
+    margin-top: 0;
   }
 }
 .right-about {
