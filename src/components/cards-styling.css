@@ -128,11 +128,21 @@
 }
 
 .type-2-card {
+  position: relative;
+}
+
+.type-2-card::before {
   background-color: #171918;
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
 }
 
 .section-card img {
   aspect-ratio: 1/1;
+  position: relative;
+  isolation: isolate;
   @media (min-width: 1025px) {
     height: 4em;
   }
@@ -154,6 +164,8 @@
 }
 .desc-title {
   text-align: center;
+  position: relative;
+  isolation: isolate;
   @media (min-width: 1025px) {
     font-size: 1.2em;
     margin: 0.4em 0;
@@ -176,8 +188,11 @@
     margin: 0.4em 0;
   }
 }
+
 .content {
   text-align: center;
+  position: relative;
+  isolation: isolate;
   @media (min-width: 1024px) {
     font-size: 0.8em;
   }
