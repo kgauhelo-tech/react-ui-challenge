@@ -56,7 +56,6 @@
 }
 
 header {
-  /* position: relative; */
   color: var(--special-text);
   display: flex;
   flex-direction: row;
@@ -84,9 +83,7 @@ header {
   flex-direction: row;
   align-items: center;
   list-style-type: none;
-  gap: 3.5em;
-  /* display: none; */
-  /*  EDIT this line*/
+  gap: 2em;
 }
 
 #links ul li a {
@@ -198,9 +195,17 @@ main {
   }
 }
 
-.line {
+.line-1 {
   border: 1px solid var(--special-text);
   width: 20%;
+  margin: 2vh 0 4vh 0;
+  @media (max-width: 780px) {
+    margin: 5vh 0 3vh 0;
+  }
+}
+.line {
+  border: 1px solid var(--special-text);
+  width: 15%;
   margin: 2vh 0 4vh 0;
   @media (max-width: 780px) {
     margin: 5vh 0 3vh 0;
@@ -226,12 +231,23 @@ main {
   letter-spacing: 0.05em;
   font-family: "Orbitron", sans-serif;
   font-weight: 400;
-  margin-top: 1vh;
   @media (max-width: 780px) {
     margin-top: 2vh;
   }
   @media (max-width: 425px) {
     font-size: 2rem;
+  }
+}
+
+.heading {
+  font-size: 2rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  @media (max-width: 780px) {
+    margin-top: 2vh;
+  }
+  @media (max-width: 425px) {
+    font-size: 1.5rem;
   }
 }
 
@@ -265,7 +281,7 @@ button:hover {
   align-items: center;
   margin: 26vh 0 10vh 0;
   flex-wrap: wrap;
-  align-items: center; /* Last edit. Laptop view 1440 */
+  align-items: center;
 }
 
 .left-services {
@@ -307,7 +323,6 @@ button:hover {
     justify-items: center;
     gap: 2em;
     margin: 0 auto;
-    /* margin-bottom: 5vh; */
   }
   @media (max-width: 320px) {
     display: grid;

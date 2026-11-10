@@ -1,0 +1,17 @@
+My Thinking
+- I didn't know at the time that I could just install the dependency for reicon, instead I downloaded the icons
+- now for my projects, I just install the dependency
+
+Issues faced
+- There was a number of misaligned containers when they reached smaller devices
+- The colors I used did not have the correct properties, they were lighter
+- Finding assets that closely resembled the ones in the design
+- I was unsure about using components
+- I had a problem with making the background of some items transparent as they should've been
+
+What needs to be updated
+- Install reicon-react
+- spacing should be consistent
+- use of components
+
+Any clarifying questions on the tools
