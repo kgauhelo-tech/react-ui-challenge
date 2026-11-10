@@ -56,7 +56,7 @@
   font-family: "Orbitron", sans-serif;
 }
 
-/* ABout Section Card styling */
+/* About Section Card styling */
 .section-card {
   transition: all ease-in-out 0.3s;
   border-radius: 0.2em;
@@ -76,9 +76,9 @@
     height: 10em;
     flex-wrap: nowrap;
   }
-  @media (min-width: 425px) and (max-width: 768px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     padding: 4vh 6vw;
-    width: 26vw;
+    width: 27vw;
     height: 30vh;
     flex-wrap: nowrap;
     overflow: hidden;
@@ -176,8 +176,8 @@
   }
 
   @media (min-width: 425px) and (max-width: 768px) {
-    font-size: 1.5em;
-    margin: 0.4em 0;
+    font-size: 1.2em;
+    padding: 0.1rem;
   }
   @media (min-width: 375px) and (max-width: 425px) {
     font-size: 1.2em;
@@ -197,7 +197,7 @@
     font-size: 0.8em;
   }
   @media (min-width: 425px) and (max-width: 768px) {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   @media (min-width: 375px) and (max-width: 425px) {
     font-size: 1em;

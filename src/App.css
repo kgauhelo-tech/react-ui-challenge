@@ -281,7 +281,7 @@ button:hover {
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    padding-bottom: 5rem;
+    padding-top: 5rem;
   }
 }
 
@@ -359,6 +359,14 @@ button:hover {
     flex-direction: column;
     justify-content: center;
   }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 5rem;
+    height: 100%;
+  }
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    padding: 0;
+    height: 100vh;
+  }
 }
 
 .left-about {
@@ -378,6 +386,11 @@ button:hover {
     right: 58px;
     height: 30em;
     filter: blur(2px);
+    width: 100%;
+    bottom: 4rem;
+  }
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    padding: 0;
   }
 
   @media screen and (max-width: 375px) {
@@ -413,7 +426,10 @@ button:hover {
 /* Footer Styling */
 
 footer {
-  padding: 2rem 0;
+  padding-top: 5rem;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 2rem;
+  }
 }
 
 .footer-cards {
