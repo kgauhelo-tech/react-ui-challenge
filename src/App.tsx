@@ -42,11 +42,11 @@ function App() {
   return (
     <>
       <div id="container">
-        <div className="background-text">
+        <div className={isOpen ? "blur background-text" : "background-text"}>
+          <h1>H</h1>
           <h1>Y</h1>
           <h1>K</h1>
           <h1>R</h1>
-          <h1>H</h1>
           <h1>O</h1>
           <h1>X</h1>
         </div>
@@ -149,7 +149,7 @@ function App() {
           <div id="services" className="services-section">
             <div className="left-services">
               <p className="special">OUR SERVICES</p>
-              <h2 className="title">
+              <h2 className="heading">
                 WHAT WE <span className="special">DO</span>?
                 <hr className="line" />
               </h2>
@@ -211,7 +211,7 @@ function App() {
 
             <div className="right-about">
               <p className="special">ABOUT US</p>
-              <h2 className="title">
+              <h2 className="heading">
                 WHO ARE <span className="special">WE</span>?
               </h2>
               <hr className="line" />
